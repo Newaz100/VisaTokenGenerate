@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Generate Token";
+}
+
+<h2>Generate Token</h2>
+
+@if (!string.IsNullOrEmpty(ViewBag.Error))
+{
+    <div class="alert alert-danger">
+        @ViewBag.Error
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.Success))
+{
+    <div class="alert alert-success">
+        @ViewBag.Success
+    </div>
+}
+
+<form method="post">
+    <div class="form-group">
+        <label for="visaType">Visa Type</label>
+        <select id="visaType" name="visaType" class="form-control">
+            <option value="">Select Visa Type</option>
+            <option value="Medical">Medical</option>
+            <option value="Tourist">Tourist</option>
+            <option value="Business">Business</option>
+            <option value="GO">GO</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Generate Token</button>
+</form>

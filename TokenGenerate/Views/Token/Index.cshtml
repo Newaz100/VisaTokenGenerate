@@ -1,0 +1,28 @@
+﻿@model IEnumerable<TokenGenerate.EF.Tables.Token>
+@{
+    ViewBag.Title = "Token List";
+}
+
+<h2>Token List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Token Number</th>
+            <th>Visa Type</th>
+            <th>Generated Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var token in Model)
+        {
+            <tr>
+                <td>@token.Id</td>
+                <td>@token.TokenNumber</td>
+                <td>@token.VisaType</td>
+                <td>@token.GeneratedDate</td>
+            </tr>
+        }
+    </tbody>
+</table>
